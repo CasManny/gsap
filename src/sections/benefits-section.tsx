@@ -2,6 +2,7 @@ import React from "react";
 import { ClipPathTitle } from "../components/clipath-text";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { VideoPinSection } from "../components/video-pin";
 
 export const BenefitSection = () => {
   useGSAP(() => {
@@ -40,8 +41,6 @@ export const BenefitSection = () => {
         clipPath: "polygon(0% 0%, 100% 0, 100% 100%, 0% 100%)",
         ease: "circ.out",
       });
-
-      
   });
   return (
     <section className="benefit-section">
@@ -86,6 +85,10 @@ export const BenefitSection = () => {
             <p>And much more ...</p>
           </div>
         </div>
+      </div>
+
+      <div className="relative overlay-box">
+        <VideoPinSection />
       </div>
     </section>
   );

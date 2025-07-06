@@ -8,6 +8,8 @@ import { HeroSection } from "./sections/hero-section";
 import { MessageSection } from "./sections/message-section";
 import { NutritionSection } from "./sections/nutrition-section";
 import { BenefitSection } from "./sections/benefits-section";
+import { TestimonialSection } from "./sections/testimonial-section";
+import { FooterSection } from "./sections/footer-section";
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 const App = () => {
@@ -26,7 +28,13 @@ const App = () => {
           <MessageSection />
           <FlavorSection />
           <NutritionSection />
-          <BenefitSection />
+
+          {/* the extra div is required for the overlapping effect from the testimonal section */}
+          <div className="">
+            <BenefitSection />
+            <TestimonialSection />
+          </div>
+          <FooterSection />
         </div>
       </div>
     </main>
